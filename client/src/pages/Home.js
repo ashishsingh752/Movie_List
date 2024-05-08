@@ -60,9 +60,18 @@ export default function Home() {
                 <td className="border px-4 py-2">{movie.score}</td>
                 <td className="border px-4 py-2">
                   <Link to={`/add/${movie.id}`}>
-                    <button className="bg-blue-500 text-white px-2 py-1 rounded hover:bg-blue-700">Edit</button>
+                    {" "}
+                    <button className="bg-blue-500 text-white px-2 py-1 rounded hover:bg-blue-700">
+                      Edit
+                    </button>
                   </Link>
-                  <button className="bg-red-500 text-white px-2 py-1 rounded hover:bg-red-700 ml-2" onClick={() => handleDelete(movie.id)}>Delete</button>
+
+                  <button
+                    className="bg-red-500 text-white px-2 py-1 rounded hover:bg-red-700 ml-2"
+                    onClick={() => handleDelete(movie.id)}
+                  >
+                    Delete
+                  </button>
                 </td>
               </tr>
             ))}

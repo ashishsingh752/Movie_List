@@ -24,7 +24,7 @@ export default function Add() {
     try {
       const response = await axios.get(`http://localhost:5000/movie/${id}`);
       if (response.status === 200) {
-        setFormData({ ...response.data });
+        setFormData({ ...response.data[0] });
       }
     } catch (error) {
       console.error("Error fetching movie:", error);
